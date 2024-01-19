@@ -1,10 +1,10 @@
 import mongoose from 'mongoose';
 
-const baseUrl = process.env.MONGODB || '0.0.0.0:27017';
+const uri="mongodb+srv://ravi:<password>@atlascluster.tlcgbgf.mongodb.net/ChatterUp?retryWrites=true&w=majority";
 
 export const connectToDatabase = async () => {
     try {
-        await mongoose.connect(`mongodb://${baseUrl}/chatterUp` , {
+        await mongoose.connect(uri, {
            useNewUrlParser: true,
            useUnifiedTopology: true
        });
