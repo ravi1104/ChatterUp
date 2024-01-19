@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const uri="mongodb+srv://ravi:<password>@atlascluster.tlcgbgf.mongodb.net/ChatterUp?retryWrites=true&w=majority";
+const uri="mongodb+srv://ravi:4298@atlascluster.tlcgbgf.mongodb.net/ChatterUp?retryWrites=true&w=majority";
 
 export const connectToDatabase = async () => {
     try {
