@@ -1,14 +1,16 @@
 const socket = io.connect('https://expressjs-on-koyeb-fresher.koyeb.app/');
 // DOM elements
 const myPrompt = document.getElementById('my-prompt');
+const myPromptContainer= document.getElementById('my-prompt-container');
 const userName = document.getElementById('name');
 const message = document.getElementById('text-message');
 const sendMessage = document.getElementById('message-form');
 
-
 // Display prompt on page load
 document.addEventListener('DOMContentLoaded', () => {
+    myPromptContainer.style.display= "fixed";
     myPrompt.style.display = "flex";
+    
 });
 
 
@@ -18,6 +20,7 @@ myPrompt.addEventListener('submit', (event) => {
     const welcome = document.getElementById('welcome');
     welcome.innerText = "Welcome, " + userName.value;
     myPrompt.style.display = "none";
+    myPromptContainer.style.display= "none";
     socket.emit('join', userName.value);
 });
 

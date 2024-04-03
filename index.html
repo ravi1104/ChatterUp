@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Task Management App</title>
+    <title>Chatter Up</title>
     <link rel="stylesheet" href="style.css">
     <!-- Include the SocketIOFile library -->
 
@@ -13,17 +13,18 @@
 
 <body>
     <h1 class="chatterup-heading">ChatterUp</h1>
-    <div id="promt">
-        <form id="my-prompt">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <button type="submit">Enter</button>
-        </form>
-
-
+    <div id="my-prompt-container">
+        <div id="promt">
+            <form id="my-prompt">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <button type="submit">Enter</button>
+            </form>
+        </div>
     </div>
+
     <div id="container" class="container">
         <div class="left-container">
             <div id="message-list">
@@ -39,7 +40,7 @@
                 </div> -->
 
             </div>
-            <div  id="message-form-div">
+            <div id="message-form-div">
                 <!-- Create a form to add new tasks -->
                 <form id="message-form">
                     <div id="new-message" style="width: 100%;">
